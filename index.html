@@ -1,0 +1,849 @@
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ready-to-Use Excel Template Bundle - আপনার এক্সেল সমস্যার সমাধান</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Hind+Siliguri:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        :root {
+            --primary: #2563eb;
+            --primary-dark: #1d4ed8;
+            --secondary: #10b981;
+            --accent: #f59e0b;
+            --light: #f8fafc;
+            --dark: #1e293b;
+            --gray: #64748b;
+            --gradient: linear-gradient(135deg, #2563eb 0%, #10b981 100%);
+            --shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+            --radius: 12px;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: 'Hind Siliguri', sans-serif;
+            line-height: 1.6;
+            color: var(--dark);
+            background-color: #f1f5f9;
+            overflow-x: hidden;
+        }
+
+        .container {
+            width: 100%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        section {
+            padding: 80px 0;
+        }
+
+        h1, h2, h3, h4 {
+            font-weight: 700;
+            line-height: 1.2;
+            margin-bottom: 1rem;
+        }
+
+        h1 {
+            font-size: 2.5rem;
+        }
+
+        h2 {
+            font-size: 2rem;
+            text-align: center;
+            margin-bottom: 3rem;
+            position: relative;
+        }
+
+        h2:after {
+            content: '';
+            position: absolute;
+            bottom: -10px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 80px;
+            height: 4px;
+            background: var(--gradient);
+            border-radius: 2px;
+        }
+
+        p {
+            margin-bottom: 1.5rem;
+            font-size: 1.1rem;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 14px 32px;
+            background: var(--gradient);
+            color: white;
+            border: none;
+            border-radius: var(--radius);
+            font-size: 1.1rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            text-decoration: none;
+            box-shadow: var(--shadow);
+        }
+
+        .btn:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+        }
+
+        .btn-secondary {
+            background: white;
+            color: var(--primary);
+        }
+
+        .btn-secondary:hover {
+            background: #f8fafc;
+        }
+
+        /* Hero Section */
+        .hero {
+            background: var(--gradient);
+            color: white;
+            padding: 120px 0;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero:before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.05'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 1;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .hero h1 {
+            font-size: 2.8rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .hero p {
+            font-size: 1.3rem;
+            margin-bottom: 2.5rem;
+            opacity: 0.9;
+        }
+
+        .hero-btns {
+            display: flex;
+            gap: 20px;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        /* Features Section */
+        .features {
+            background: white;
+        }
+
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+            gap: 30px;
+        }
+
+        .feature-card {
+            background: white;
+            border-radius: var(--radius);
+            padding: 30px;
+            text-align: center;
+            box-shadow: var(--shadow);
+            transition: all 0.3s ease;
+            border: 1px solid #e2e8f0;
+        }
+
+        .feature-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+        }
+
+        .feature-icon {
+            width: 70px;
+            height: 70px;
+            margin: 0 auto 20px;
+            background: var(--gradient);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 1.8rem;
+        }
+
+        .feature-card h3 {
+            color: var(--primary);
+            margin-bottom: 15px;
+        }
+
+        /* Bonus Section */
+        .bonus {
+            background: linear-gradient(135deg, #f8fafc 0%, #e2e8f0 100%);
+        }
+
+        .bonus-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 30px;
+        }
+
+        .bonus-card {
+            background: white;
+            border-radius: var(--radius);
+            padding: 30px;
+            display: flex;
+            align-items: center;
+            gap: 20px;
+            box-shadow: var(--shadow);
+            transition: all 0.3s ease;
+        }
+
+        .bonus-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .bonus-icon {
+            width: 60px;
+            height: 60px;
+            background: var(--gradient);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 1.5rem;
+            flex-shrink: 0;
+        }
+
+        .bonus-content h3 {
+            color: var(--primary);
+            margin-bottom: 10px;
+        }
+
+        /* Benefits Section */
+        .benefits {
+            background: white;
+        }
+
+        .benefits-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 40px;
+        }
+
+        .benefit-item {
+            text-align: center;
+            max-width: 250px;
+        }
+
+        .benefit-icon {
+            width: 80px;
+            height: 80px;
+            margin: 0 auto 20px;
+            background: var(--gradient);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 2rem;
+        }
+
+        .benefit-item h3 {
+            color: var(--primary);
+        }
+
+        /* CTA Section */
+        .cta {
+            background: var(--gradient);
+            color: white;
+            text-align: center;
+            padding: 100px 0;
+        }
+
+        .cta h2 {
+            color: white;
+        }
+
+        .cta h2:after {
+            background: white;
+        }
+
+        .cta p {
+            font-size: 1.3rem;
+            max-width: 700px;
+            margin: 0 auto 2.5rem;
+        }
+
+        /* Form Section */
+        .form-section {
+            background: white;
+        }
+
+        .form-container {
+            max-width: 700px;
+            margin: 0 auto;
+            background: white;
+            border-radius: var(--radius);
+            padding: 40px;
+            box-shadow: var(--shadow);
+        }
+
+        .form-group {
+            margin-bottom: 25px;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: 600;
+            color: var(--dark);
+        }
+
+        .form-group input {
+            width: 100%;
+            padding: 14px;
+            border: 1px solid #cbd5e1;
+            border-radius: var(--radius);
+            font-family: 'Hind Siliguri', sans-serif;
+            font-size: 1rem;
+            transition: all 0.3s ease;
+        }
+
+        .form-group input:focus {
+            outline: none;
+            border-color: var(--primary);
+            box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.1);
+        }
+
+        .form-submit {
+            text-align: center;
+            margin-top: 30px;
+        }
+
+        /* Footer */
+        footer {
+            background: var(--dark);
+            color: white;
+            padding: 50px 0 20px;
+            text-align: center;
+        }
+
+        .footer-content {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 30px;
+            margin-bottom: 40px;
+        }
+
+        .social-links {
+            display: flex;
+            gap: 20px;
+        }
+
+        .social-links a {
+            color: white;
+            font-size: 1.5rem;
+            transition: all 0.3s ease;
+        }
+
+        .social-links a:hover {
+            color: var(--secondary);
+            transform: translateY(-3px);
+        }
+
+        .copyright {
+            padding-top: 20px;
+            border-top: 1px solid #334155;
+            width: 100%;
+            font-size: 0.9rem;
+            color: #94a3b8;
+        }
+
+        /* Download Section */
+        .download-section {
+            display: none;
+            text-align: center;
+            padding: 60px 0;
+            background: linear-gradient(135deg, #dbeafe 0%, #bbf7d0 100%);
+            border-radius: var(--radius);
+            margin-top: 40px;
+        }
+
+        .download-section h2 {
+            color: var(--primary);
+        }
+
+        .download-btn {
+            margin-top: 20px;
+        }
+
+        /* Admin Access Button */
+        .admin-access-btn {
+            position: fixed;
+            bottom: 20px;
+            left: 20px;
+            background: var(--dark);
+            color: white;
+            padding: 10px 15px;
+            border-radius: var(--radius);
+            font-size: 0.9rem;
+            text-decoration: none;
+            opacity: 0.7;
+            transition: all 0.3s ease;
+            z-index: 999;
+        }
+
+        .admin-access-btn:hover {
+            opacity: 1;
+            transform: translateY(-2px);
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 2rem;
+            }
+            
+            h2 {
+                font-size: 1.7rem;
+            }
+            
+            .hero h1 {
+                font-size: 2.2rem;
+            }
+            
+            .hero p {
+                font-size: 1.1rem;
+            }
+            
+            .hero-btns {
+                flex-direction: column;
+                align-items: center;
+            }
+            
+            .btn {
+                width: 100%;
+                max-width: 300px;
+            }
+            
+            .bonus-card {
+                flex-direction: column;
+                text-align: center;
+            }
+            
+            .form-container {
+                padding: 25px;
+            }
+            
+            .admin-access-btn {
+                bottom: 10px;
+                left: 10px;
+                font-size: 0.8rem;
+                padding: 8px 12px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Admin Access Button -->
+    <a href="admin.html" class="admin-access-btn">
+        <i class="fas fa-user-shield"></i> Admin
+    </a>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <h1>আপনি কি এক্সেলে ঘন্টার পর ঘন্টা টেমপ্লেট বানাতে ক্লান্ত?</h1>
+                <p>প্রতিদিন একই কাজ বারবার করতে করতে বিরক্ত? অফিস হোক, বিজনেস হোক, কিংবা পড়াশোনা — প্রতিদিন হিসাব রাখা, বাজেট বানানো, রিপোর্ট তৈরি করা লাগে, কিন্তু সময়ের অভাবে কাজ জমে যাচ্ছে!</p>
+                <p>এখন থেকে এসব ঝামেলা শেষ! কারণ আপনার জন্যই আছে — এক হাজারেরও বেশি Ready-to-Use Excel Template Bundle!</p>
+                <div class="hero-btns">
+                    <a href="#order-form" class="btn">এখনই অর্ডার করুন</a>
+                    <a href="#features" class="btn btn-secondary">বিস্তারিত জানুন</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section id="features" class="features">
+        <div class="container">
+            <h2>এখানে পাচ্ছেন এক জায়গায়</h2>
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-calculator"></i>
+                    </div>
+                    <h3>অ্যাকাউন্টিং</h3>
+                    <p>সম্পূর্ণ অ্যাকাউন্টিং সিস্টেমের জন্য প্রয়োজনীয় সব টেমপ্লেট</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-boxes"></i>
+                    </div>
+                    <h3>ইনভেন্টরি</h3>
+                    <p>পণ্য তালিকা ও স্টক ম্যানেজমেন্টের জন্য কার্যকরী টেমপ্লেট</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-chart-line"></i>
+                    </div>
+                    <h3>সেলস ট্র্যাকিং</h3>
+                    <p>বিক্রয় বিশ্লেষণ ও ট্র্যাকিংয়ের জন্য উন্নত টেমপ্লেট</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-users"></i>
+                    </div>
+                    <h3>এইচআর ম্যানেজমেন্ট</h3>
+                    <p>কর্মচারী তথ্য ও পে-রোল ব্যবস্থাপনার টেমপ্লেট</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-tasks"></i>
+                    </div>
+                    <h3>প্রজেক্ট ম্যানেজমেন্ট</h3>
+                    <p>প্রকল্প পরিকল্পনা ও ট্র্যাকিংয়ের টেমপ্লেট</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-money-bill-wave"></i>
+                    </div>
+                    <h3>বাজেটিং</h3>
+                    <p>ব্যক্তিগত ও ব্যবসায়িক বাজেট তৈরির টেমপ্লেট</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-balance-scale"></i>
+                    </div>
+                    <h3>প্রফিট অ্যান্ড লস</h3>
+                    <p>লাভ-ক্ষতি বিশ্লেষণের জন্য কার্যকরী টেমপ্লেট</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-wallet"></i>
+                    </div>
+                    <h3>পারসোনাল ফাইন্যান্স</h3>
+                    <p>ব্যক্তিগত আয়-ব্যয় ব্যবস্থাপনার টেমপ্লেট</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Bonus Section -->
+    <section class="bonus">
+        <div class="container">
+            <h2>বোনাস প্যাকেজের মধ্যে পাচ্ছেন</h2>
+            <div class="bonus-grid">
+                <div class="bonus-card">
+                    <div class="bonus-icon">
+                        <i class="fas fa-file-powerpoint"></i>
+                    </div>
+                    <div class="bonus-content">
+                        <h3>১,০০০+ বিজনেস প্রেজেন্টেশন টেমপ্লেট</h3>
+                        <p>পেশাদার উপস্থাপনার জন্য তৈরি টেমপ্লেট</p>
+                    </div>
+                </div>
+                <div class="bonus-card">
+                    <div class="bonus-icon">
+                        <i class="fas fa-file-excel"></i>
+                    </div>
+                    <div class="bonus-content">
+                        <h3>৯০০ বোনাস এক্সেল টেমপ্লেট</h3>
+                        <p>বিভিন্ন ধরনের এক্সেল টেমপ্লেটের বিশাল কালেকশন</p>
+                    </div>
+                </div>
+                <div class="bonus-card">
+                    <div class="bonus-icon">
+                        <i class="fas fa-file-alt"></i>
+                    </div>
+                    <div class="bonus-content">
+                        <h3>১,০০০+ CV & Resume টেমপ্লেট</h3>
+                        <p>চাকরি পাওয়ার জন্য আকর্ষণীয় সিভি টেমপ্লেট</p>
+                    </div>
+                </div>
+                <div class="bonus-card">
+                    <div class="bonus-icon">
+                        <i class="fas fa-video"></i>
+                    </div>
+                    <div class="bonus-content">
+                        <h3>৩২টি এক্সেল ভিডিও টিউটোরিয়াল</h3>
+                        <p>এক্সেল দক্ষতা উন্নত করার জন্য ভিডিও টিউটোরিয়াল</p>
+                    </div>
+                </div>
+                <div class="bonus-card">
+                    <div class="bonus-icon">
+                        <i class="fas fa-book"></i>
+                    </div>
+                    <div class="bonus-content">
+                        <h3>৩৩৩টি শর্টকাট ইবুক</h3>
+                        <p>এক্সেল শর্টকাট ও টিপসের সম্পূর্ণ গাইড</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Benefits Section -->
+    <section class="benefits">
+        <div class="container">
+            <h2>আপনি যা পাচ্ছেন</h2>
+            <div class="benefits-container">
+                <div class="benefit-item">
+                    <div class="benefit-icon">
+                        <i class="fas fa-clock"></i>
+                    </div>
+                    <h3>সময় বাঁচান</h3>
+                    <p>প্রতিদিন ঘন্টার পর ঘন্টা সময় বাঁচবে</p>
+                </div>
+                <div class="benefit-item">
+                    <div class="benefit-icon">
+                        <i class="fas fa-brain"></i>
+                    </div>
+                    <h3>কাজ করুন স্মার্টলি</h3>
+                    <p>সহজ ও কার্যকরী টেমপ্লেটে কাজ করুন</p>
+                </div>
+                <div class="benefit-item">
+                    <div class="benefit-icon">
+                        <i class="fas fa-chart-bar"></i>
+                    </div>
+                    <h3>প্রোডাক্টিভিটি বাড়ান</h3>
+                    <p>কাজের গতি ও দক্ষতা বহুগুণ বাড়বে</p>
+                </div>
+                <div class="benefit-item">
+                    <div class="benefit-icon">
+                        <i class="fas fa-times-circle"></i>
+                    </div>
+                    <h3>টেমপ্লেট বানাতে হবে না</h3>
+                    <p>আর নতুন করে টেমপ্লেট বানাতে হবে না</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta">
+        <div class="container">
+            <h2>Smart মানুষ সময় নষ্ট করে না — তারা সঠিক টুল ব্যবহার করে!</h2>
+            <p>এখনই অর্ডার করুন WhatsApp নাম্বারে!</p>
+            <a href="#order-form" class="btn btn-secondary">এখনই অর্ডার করুন</a>
+        </div>
+    </section>
+
+    <!-- Form Section -->
+    <section id="order-form" class="form-section">
+        <div class="container">
+            <h2>অর্ডার ফর্ম</h2>
+            <div class="form-container">
+                <form id="payment-form" action="https://formspree.io/f/mblaaggp" method="POST">
+                    <div class="form-group">
+                        <label for="name">পূর্ণ নাম</label>
+                        <input type="text" id="name" name="name" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">ইমেইল এড্রেস</label>
+                        <input type="email" id="email" name="email" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="whatsapp">হোয়াটসঅ্যাপ নাম্বার</label>
+                        <input type="tel" id="whatsapp" name="whatsapp" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="payment-number">বিকাশ বা নগদ নাম্বার</label>
+                        <input type="text" id="payment-number" name="payment-number" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="transaction-id">ট্রানজেকশন আইডি</label>
+                        <input type="text" id="transaction-id" name="transaction-id" required>
+                    </div>
+                    <div class="form-submit">
+                        <button type="submit" class="btn">অর্ডার সম্পন্ন করুন</button>
+                    </div>
+                </form>
+                
+                <div id="payment-verification" style="display: none; text-align: center; margin-top: 20px; padding: 15px; background: #dbeafe; border-radius: var(--radius);">
+                    <p>আপনার পেমেন্ট ভেরিফিকেশন চলছে…</p>
+                </div>
+                
+                <div id="download-section" class="download-section">
+                    <h2>অভিনন্দন! আপনার পেমেন্ট ভেরিফাই করা হয়েছে</h2>
+                    <p>নিচের বাটন থেকে এখনই ডাউনলোড করুন</p>
+                    <a href="https://drive.google.com/drive/folders/1V3ulku2i_1eh5w0YGwZPWgdHooS5GWfv" target="_blank" class="btn download-btn">ডাউনলোড করুন</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="logo">
+                    <h3 style="color: white;">Excel Template Bundle</h3>
+                </div>
+                <div class="social-links">
+                    <a href="#"><i class="fab fa-whatsapp"></i></a>
+                    <a href="#"><i class="fab fa-facebook"></i></a>
+                    <a href="#"><i class="fab fa-linkedin"></i></a>
+                </div>
+            </div>
+            <div class="copyright">
+                <p>&copy; 2023 Excel Template Bundle. সকল অধিকার সংরক্ষিত।</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const form = document.getElementById('payment-form');
+            const paymentVerification = document.getElementById('payment-verification');
+            const downloadSection = document.getElementById('download-section');
+            
+            // ভিজিটর ট্র্যাকিং
+            trackVisitor();
+            
+            // Form submission
+            form.addEventListener('submit', function(e) {
+                e.preventDefault();
+                
+                // Show payment verification message
+                paymentVerification.style.display = 'block';
+                form.style.display = 'none';
+                
+                // Store order data in localStorage
+                const formData = new FormData(form);
+                const orderData = {};
+                for (let [key, value] of formData.entries()) {
+                    orderData[key] = value;
+                }
+                
+                // Add timestamp and status
+                orderData.timestamp = new Date().toISOString();
+                orderData.status = 'pending'; // pending, approved, rejected
+                orderData.id = generateOrderId();
+                
+                // Save to localStorage
+                let orders = JSON.parse(localStorage.getItem('excelTemplateOrders') || '[]');
+                orders.push(orderData);
+                localStorage.setItem('excelTemplateOrders', JSON.stringify(orders));
+                
+                // Track conversion
+                trackConversion();
+                
+                // Simulate form submission to Formspree
+                fetch(form.action, {
+                    method: 'POST',
+                    body: formData,
+                    headers: {
+                        'Accept': 'application/json'
+                    }
+                }).then(response => {
+                    if (response.ok) {
+                        console.log('Form submitted successfully');
+                    } else {
+                        console.log('Form submission failed');
+                    }
+                }).catch(error => {
+                    console.log('Form submission error:', error);
+                });
+            });
+            
+            // ভিজিটর ট্র্যাকিং ফাংশন
+            function trackVisitor() {
+                let visitors = JSON.parse(localStorage.getItem('siteVisitors') || '[]');
+                const visitorId = generateVisitorId();
+                const now = new Date();
+                
+                // Check if this is a new visitor
+                const existingVisitor = visitors.find(v => v.id === visitorId);
+                
+                if (!existingVisitor) {
+                    // New visitor
+                    visitors.push({
+                        id: visitorId,
+                        firstVisit: now.toISOString(),
+                        lastVisit: now.toISOString(),
+                        visitCount: 1,
+                        page: 'landing'
+                    });
+                } else {
+                    // Returning visitor
+                    existingVisitor.lastVisit = now.toISOString();
+                    existingVisitor.visitCount++;
+                }
+                
+                localStorage.setItem('siteVisitors', JSON.stringify(visitors));
+            }
+            
+            // কনভার্শন ট্র্যাকিং ফাংশন
+            function trackConversion() {
+                let conversions = JSON.parse(localStorage.getItem('conversions') || '[]');
+                conversions.push({
+                    timestamp: new Date().toISOString(),
+                    type: 'order',
+                    page: 'landing'
+                });
+                localStorage.setItem('conversions', JSON.stringify(conversions));
+            }
+            
+            // ভিজিটর আইডি জেনারেটর
+            function generateVisitorId() {
+                return 'visitor_' + Math.random().toString(36).substr(2, 9);
+            }
+            
+            // অর্ডার আইডি জেনারেটর
+            function generateOrderId() {
+                return 'order_' + Math.random().toString(36).substr(2, 9);
+            }
+            
+            // Smooth scrolling for anchor links
+            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+                anchor.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    
+                    const targetId = this.getAttribute('href');
+                    if (targetId === '#') return;
+                    
+                    const targetElement = document.querySelector(targetId);
+                    if (targetElement) {
+                        window.scrollTo({
+                            top: targetElement.offsetTop - 80,
+                            behavior: 'smooth'
+                        });
+                    }
+                });
+            });
+        });
+    </script>
+</body>
+</html>
